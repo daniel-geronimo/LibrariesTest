@@ -1,0 +1,17 @@
+# Uncomment the next line to define a global platform for your project
+  platform :ios, '9.0'
+
+target 'LibrariesTest' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for LibrariesTest
+  pod 'PMSuperButton'
+  pod 'BulletinBoard' # nice pop-ups
+  pod 'NVActivityIndicatorView' # cool loaders/spinners
+  pod 'Motion', '~> 3.1.0' # transitions between screens and other animations
+  pod 'Pastel' # to be used for launch screen animation mainly
+  pod 'ViewAnimator' # to be used when loading a view
+  pod 'EZYGradientView', :git => 'https://github.com/Niphery/EZYGradientView' # add gradients with no line of code, directly in IB
+
+end
