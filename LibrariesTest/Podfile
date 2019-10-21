@@ -13,5 +13,9 @@ target 'LibrariesTest' do
   pod 'Pastel' # to be used for launch screen animation mainly
   pod 'ViewAnimator' # to be used when loading a view
   pod 'EZYGradientView', :git => 'https://github.com/Niphery/EZYGradientView' # add gradients with no line of code, directly in IB
+  
+  pod 'Hero'
+  pod 'BEMCheckBox'
+  pod 'MaterialComponents/Buttons'
 
 end

@@ -16,6 +16,8 @@
 		649572D6235713FC00A16B53 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649572D5235713FC00A16B53 /* ListViewController.swift */; };
 		649572D8235715AD00A16B53 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649572D7235715AD00A16B53 /* TabBarController.swift */; };
 		649572DA235744A800A16B53 /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649572D9235744A800A16B53 /* BoardViewController.swift */; };
+		649572DC2358A79400A16B53 /* GridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649572DB2358A79400A16B53 /* GridViewController.swift */; };
+		649572DE2358B75100A16B53 /* GridDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649572DD2358B75100A16B53 /* GridDetailViewController.swift */; };
 		F66CF2C59D5BE9C8026FF8C2 /* Pods_LibrariesTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C74AF71F4C62FEC9D541BF6 /* Pods_LibrariesTest.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +33,8 @@
 		649572D5235713FC00A16B53 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		649572D7235715AD00A16B53 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		649572D9235744A800A16B53 /* BoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardViewController.swift; sourceTree = "<group>"; };
+		649572DB2358A79400A16B53 /* GridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridViewController.swift; sourceTree = "<group>"; };
+		649572DD2358B75100A16B53 /* GridDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridDetailViewController.swift; sourceTree = "<group>"; };
 		8C74AF71F4C62FEC9D541BF6 /* Pods_LibrariesTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LibrariesTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1521B5EF1FA75C6186D2D17 /* Pods-LibrariesTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibrariesTest.release.xcconfig"; path = "Target Support Files/Pods-LibrariesTest/Pods-LibrariesTest.release.xcconfig"; sourceTree = "<group>"; };
 		D6F6A779F7EDB6CC4482DF3E /* Pods-LibrariesTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibrariesTest.debug.xcconfig"; path = "Target Support Files/Pods-LibrariesTest/Pods-LibrariesTest.debug.xcconfig"; sourceTree = "<group>"; };
@@ -79,6 +83,8 @@
 				6469A3DE2356FF44007A5679 /* LaunchScreen.storyboard */,
 				6469A3E12356FF44007A5679 /* Info.plist */,
 				649572D9235744A800A16B53 /* BoardViewController.swift */,
+				649572DB2358A79400A16B53 /* GridViewController.swift */,
+				649572DD2358B75100A16B53 /* GridDetailViewController.swift */,
 			);
 			path = LibrariesTest;
 			sourceTree = "<group>";
@@ -216,8 +222,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				6469A3D82356FF43007A5679 /* ViewController.swift in Sources */,
+				649572DE2358B75100A16B53 /* GridDetailViewController.swift in Sources */,
 				6469A3D42356FF43007A5679 /* AppDelegate.swift in Sources */,
 				649572D6235713FC00A16B53 /* ListViewController.swift in Sources */,
+				649572DC2358A79400A16B53 /* GridViewController.swift in Sources */,
 				649572D8235715AD00A16B53 /* TabBarController.swift in Sources */,
 				6469A3D62356FF43007A5679 /* SceneDelegate.swift in Sources */,
 				649572DA235744A800A16B53 /* BoardViewController.swift in Sources */,
@@ -366,7 +374,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LVJRYQMMP8;
+				DEVELOPMENT_TEAM = X9VY2V2AV9;
 				INFOPLIST_FILE = LibrariesTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -385,7 +393,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LVJRYQMMP8;
+				DEVELOPMENT_TEAM = X9VY2V2AV9;
 				INFOPLIST_FILE = LibrariesTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

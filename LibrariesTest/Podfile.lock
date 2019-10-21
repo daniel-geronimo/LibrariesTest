@@ -1,6 +1,45 @@
 PODS:
+  - BEMCheckBox (1.4.1)
   - BulletinBoard (4.1.0)
   - EZYGradientView (1.5.1)
+  - Hero (1.4.0)
+  - MaterialComponents/AnimationTiming (92.4.0)
+  - MaterialComponents/Buttons (92.4.0):
+    - MaterialComponents/Elevation
+    - MaterialComponents/Ink
+    - MaterialComponents/private/Math
+    - MaterialComponents/Ripple
+    - MaterialComponents/ShadowElevations
+    - MaterialComponents/ShadowLayer
+    - MaterialComponents/Shapes
+    - MaterialComponents/Typography
+    - MDFInternationalization
+    - MDFTextAccessibility
+  - MaterialComponents/Elevation (92.4.0):
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+  - MaterialComponents/Ink (92.4.0):
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+  - MaterialComponents/private/Application (92.4.0)
+  - MaterialComponents/private/Color (92.4.0)
+  - MaterialComponents/private/Math (92.4.0)
+  - MaterialComponents/Ripple (92.4.0):
+    - MaterialComponents/AnimationTiming
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+  - MaterialComponents/ShadowElevations (92.4.0)
+  - MaterialComponents/ShadowLayer (92.4.0):
+    - MaterialComponents/ShadowElevations
+  - MaterialComponents/Shapes (92.4.0):
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+    - MaterialComponents/ShadowLayer
+  - MaterialComponents/Typography (92.4.0):
+    - MaterialComponents/private/Application
+    - MaterialComponents/private/Math
+  - MDFInternationalization (2.0.0)
+  - MDFTextAccessibility (2.0.0)
   - Motion (3.1.3):
     - Motion/Core (= 3.1.3)
   - Motion/Core (3.1.3)
@@ -12,8 +51,11 @@ PODS:
   - ViewAnimator (2.7.0)
 
 DEPENDENCIES:
+  - BEMCheckBox
   - BulletinBoard
   - EZYGradientView (from `https://github.com/Niphery/EZYGradientView`)
+  - Hero
+  - MaterialComponents/Buttons
   - Motion (~> 3.1.0)
   - NVActivityIndicatorView
   - Pastel
@@ -22,7 +64,12 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - BEMCheckBox
     - BulletinBoard
+    - Hero
+    - MaterialComponents
+    - MDFInternationalization
+    - MDFTextAccessibility
     - Motion
     - NVActivityIndicatorView
     - Pastel
@@ -39,14 +86,19 @@ CHECKOUT OPTIONS:
     :git: https://github.com/Niphery/EZYGradientView
 
 SPEC CHECKSUMS:
+  BEMCheckBox: 5ba6e37ade3d3657b36caecc35c8b75c6c2b1a4e
   BulletinBoard: c774340545b5cfd05a96a89f63b105ecc95c86f9
   EZYGradientView: f13e7a9e774b906c66d617fb04a13c8853ba25b4
+  Hero: bac92350d7201a1a940003e0767c7b52ce7c99a1
+  MaterialComponents: b584175e16dc0bff91ca4c867c64f381f89511ae
+  MDFInternationalization: 010097556d6b09d2c4ea38e0820ea6d37be6a314
+  MDFTextAccessibility: 85c09a1bd9c321f494348e632a25063bcda35a53
   Motion: cf1e060e489f6661126374d5c60dbd2ed991605c
   NVActivityIndicatorView: d24b7ebcf80af5dcd994adb650e2b6c93379270f
   Pastel: 814f081efbe2859c37e65ee44f396e6e5be88619
   PMSuperButton: 72105fef415890c8792a9e5a784f75c461066f8b
   ViewAnimator: 5af1c6f3b310f012bf081259c43717aa54fbae73
 
-PODFILE CHECKSUM: e70f28f2a9c17f21f25d22865684764644b47a64
+PODFILE CHECKSUM: a09347b96ae3cecb16e32d6482c4caeb8d763118
 
 COCOAPODS: 1.8.3

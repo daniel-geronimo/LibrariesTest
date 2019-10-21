@@ -12,6 +12,8 @@ import BLTNBoard
 import EZYGradientView
 import PMSuperButton
 import NVActivityIndicatorView
+import MaterialComponents.MaterialButtons
+import BEMCheckBox
 
 class TextFieldBulletinPage: BLTNPageItem {
 
@@ -33,12 +35,17 @@ class ViewController: UIViewController {
     var notificationsPageItem: BLTNPageItem!
     var namePageItem: TextFieldBulletinPage!
     
+    @IBOutlet weak var materialButton: MDCButton!
+    
     @IBOutlet weak var gradientView: EZYGradientView!
     
     @IBOutlet weak var checkBoxButton: PMSuperButton!
     
     @IBOutlet weak var loadingButton: PMSuperButton!
     @IBOutlet weak var tapToShowLoadingBlockButton: PMSuperButton!
+    
+    @IBOutlet weak var checkBoxView: BEMCheckBox!
+    @IBOutlet weak var checkLabel: UILabel!
     
     @IBOutlet weak var showBulletinBoardButton: PMSuperButton!
     
@@ -60,13 +67,19 @@ class ViewController: UIViewController {
     }
     
     func configureButtons() {
+        materialButton.enableRippleBehavior = true
+        materialButton.inkStyle = .bounded
+        materialButton.inkColor = .lightGray
+        materialButton.setBackgroundColor(.white)
+        materialButton.layer.cornerRadius = 10.0
+        materialButton.setElevation(ShadowElevation(rawValue: 6.0), for: .normal)
+        
         gradientView.layer.cornerRadius = 14.0
         gradientView.clipsToBounds = true
         
 //        checkBoxButton.checkedImage = UIImage(named: "icons8-ok-75-filled")
 //        checkBoxButton.uncheckedImage = UIImage(named: "icons8-ok-75")
         checkBoxButton.checkboxButton = true
-        
         
         loadingButton.touchUpInside {
             self.loadingButton.showLoader(userInteraction: true)
@@ -84,6 +97,16 @@ class ViewController: UIViewController {
                 NVActivityIndicatorPresenter.sharedInstance.stopAnimating()
             }
         }
+        
+        checkBoxView.delegate = self
+        checkBoxView.onAnimationType = .bounce
+        checkBoxView.offAnimationType = .bounce
+        checkBoxView.onFillColor = .white
+        checkBoxView.offFillColor = .clear
+        checkBoxView.tintColor = .white
+//        checkBoxView.onCheckColor = .clear
+        
+        checkLabel.text = "Check me!"
         
         showBulletinBoardButton.animatedScaleWhenHighlighted = 0.95
         showBulletinBoardButton.animatedScaleDurationWhenHighlighted = 0.25
@@ -117,7 +140,7 @@ class ViewController: UIViewController {
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                 self.notificationsPageItem.manager?.hideActivityIndicator()
                 self.notificationsPageItem.manager?.displayNextItem()
-//                self.notificationsPageItem.manager?.push(item: self.namePageItem)
+//                self.notificationsPageItem.manager?.push(item: self.namePageItem) // same as above
             }
         }
         notificationsPageItem.alternativeHandler = { (item: BLTNActionItem) in
@@ -127,7 +150,14 @@ class ViewController: UIViewController {
         bulletinManager = BLTNItemManager(rootItem: notificationsPageItem)
         bulletinManager.backgroundViewStyle = .blurredLight
         bulletinManager.backgroundColor = .white
+        
     }
 
 }
 
+
+extension ViewController: BEMCheckBoxDelegate {
+    func didTap(_ checkBox: BEMCheckBox) {
+        checkLabel.text = checkBox.on ? "Uncheck me!" : "Check me!"
+    }
+}
