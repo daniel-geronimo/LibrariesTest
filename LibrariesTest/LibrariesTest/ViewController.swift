@@ -44,6 +44,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var loadingButton: PMSuperButton!
     @IBOutlet weak var tapToShowLoadingBlockButton: PMSuperButton!
     
+    @IBOutlet weak var pushVCButton: PMSuperButton!
+    
     @IBOutlet weak var checkBoxView: BEMCheckBox!
     @IBOutlet weak var checkLabel: UILabel!
     
@@ -96,6 +98,11 @@ class ViewController: UIViewController {
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
                 NVActivityIndicatorPresenter.sharedInstance.stopAnimating()
             }
+        }
+        
+        pushVCButton.touchUpInside {
+            let vc = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "IntroViewController") as! IntroViewController
+            self.navigationController?.pushViewController(vc, animated: true)
         }
         
         checkBoxView.delegate = self
